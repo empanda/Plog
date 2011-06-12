@@ -1,0 +1,11 @@
+# Django
+Django
+-e git://github.com/robhudson/django-debug-toolbar.git#egg=django_debug_toolbar-0.8.4-py2.6-dev
+-e git://github.com/django-extensions/django-extensions.git#egg=django_extensions-0.7_pre-py2.6-dev
+PIL
+django-nose
+
+# Other
+ipython
+ipdb
+nose

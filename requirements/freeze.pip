@@ -1,0 +1,10 @@
+Django==1.3
+PIL==1.1.7
+distribute==0.6.10
+-e git://github.com/robhudson/django-debug-toolbar.git@930f33bfe9526cc7b917853da473a358ec5fc071#egg=django_debug_toolbar-0.8.5-py2.6-dev
+-e git://github.com/django-extensions/django-extensions.git@37a0f08aaff3b6635457d8e917c08cf1a4cec191#egg=django_extensions-0.7_pre-py2.6-dev
+django-nose==0.1.3
+ipdb==0.3
+ipython==0.10.2
+nose==1.0.0
+wsgiref==0.1.2
