@@ -116,6 +116,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'django_nose',
     # Local Applications
+    'plog.apps.posts',
 )
 
 
