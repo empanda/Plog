@@ -89,20 +89,20 @@ TEMPLATE_DIRS = [
 # = Middleware Settings =
 # =======================
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES = [
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-)
+]
 
 
 # ==================
 # = Installed Apps =
 # ==================
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     # Django Contrib Applications
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -117,7 +117,7 @@ INSTALLED_APPS = (
     'django_nose',
     # Local Applications
     'plog.apps.posts',
-)
+]
 
 
 # ====================
