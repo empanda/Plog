@@ -51,6 +51,7 @@ class TestPostCreation(PostsTestCase):
         assert unicode(post) == post.title, \
             "A stringified post should return it's title."
 
+
 class TestPostQueryset(PostsTestCase):
     def test_posts_should_be_ordered_by_their_created_date(self):
         """Posts should be ordered by their created date."""
@@ -60,3 +61,19 @@ class TestPostQueryset(PostsTestCase):
         posts = list(Post.objects.all())
         assert posts == [post2, post1], \
             "Post should be ordered by newest first."
+
+
+class TestPostAdmin(PostsTestCase):
+    def test_post_admin_changelist_view_should_load(self):
+        """The Post admin changelist view should load."""
+        post = self.create_post()
+        self.assertAdminViewLoads('posts', 'post', 'changelist')
+
+    def test_post_admin_add_view_should_load(self):
+        """The Post admin add view should load."""
+        self.assertAdminViewLoads('posts', 'post', 'add')
+
+    def test_post_admin_change_view_should_load(self):
+        """The Post admin change view should load."""
+        post = self.create_post()
+        self.assertAdminViewLoads('posts', 'post', 'change', args=[post.id])

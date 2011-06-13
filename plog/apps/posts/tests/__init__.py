@@ -1,8 +1,8 @@
-from django.test import TestCase
-
+from plog.tests import PlogTestCase
 from ..models import Post
 
-class PostsTestCase(TestCase):
+
+class PostsTestCase(PlogTestCase):
     def create_post(self, **kwargs):
         defaults = {
             'title': 'A Post',
@@ -13,4 +13,3 @@ class PostsTestCase(TestCase):
         post = Post(**defaults)
         post.save()
         return post
-
